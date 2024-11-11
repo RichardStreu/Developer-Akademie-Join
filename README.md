@@ -20,7 +20,7 @@ To run this project locally, follow these steps:
 
 ### 🔗 1. Clone the repository
 ```bash
-git clone https://github.com/MirkoRinke/Developer-Akademie-Join.git
+git@github.com:RichardStreu/Developer-Akademie-Join.git
 ```
 
 ### 📂 3. Navigate to the project directory: 
