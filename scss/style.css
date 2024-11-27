@@ -1,0 +1,5316 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Inter Italic";
+  src: url("../assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+}
+/* Colors */
+/* Variables */
+/* @media breakpoints */
+/** 1400px oder schmaler */
+/** 900px oder schmaler */
+/** 600px oder schmaler */
+/** 450px oder schmaler */
+/** 350px oder schmaler */
+/** 1400px oder schmaler */
+/** 900px oder schmaler */
+/** 600px oder schmaler */
+/** 450px oder schmaler */
+/** 350px oder schmaler */
+/** 950px oder schmaler */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter";
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.d_none {
+  display: none !important;
+}
+
+.d_block {
+  display: block !important;
+}
+
+.d_flex {
+  display: flex !important;
+}
+
+svg {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.borderColorRed {
+  border-color: red !important;
+}
+
+.borderColorBlue {
+  border-color: #29abe2 !important;
+}
+
+.borderColorGrey {
+  border-color: #d1d1d1 !important;
+}
+
+header {
+  height: 96px;
+  justify-content: space-between;
+  display: flex;
+  padding-left: 52px;
+  position: relative;
+  align-items: center;
+  padding-right: 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  z-index: 60;
+}
+@media (max-width: 1400px) {
+  header {
+    height: 80px;
+  }
+}
+@media (max-width: 1400px) {
+  header .headerText {
+    background-image: url("../assets/icons/JoinLogoHeaderResponsive.png");
+    width: 30px;
+    height: 40px;
+  }
+  header .headerText span {
+    display: none;
+  }
+}
+header .header-rightSide {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 1400px) {
+  header .header-rightSide img {
+    display: none;
+  }
+}
+header .header-rightSide img:hover {
+  transform: scale(1.1);
+}
+header .header-rightSide .user-Profile-Initials {
+  width: 56px;
+  height: 56px;
+  border: 3px solid #2a3647;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-rightSide .user-Profile-Initials span {
+  font-size: 22px;
+  font-weight: bold;
+  color: lightblue;
+}
+header .header-rightSide .user-Profile-Initials:hover {
+  background-color: #e1e6ec;
+}
+header .dropDown {
+  width: 160px;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 20px 10px;
+  background-color: #2a3647;
+  position: absolute;
+  top: 96px;
+  right: 15px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .dropDown a {
+  color: #cdcdcd;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+header .dropDown .legalNotice,
+header .dropDown .privacyPolicy,
+header .dropDown .logOut,
+header .dropDown .help {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+header .dropDown .legalNotice:hover,
+header .dropDown .privacyPolicy:hover,
+header .dropDown .logOut:hover,
+header .dropDown .help:hover {
+  background-color: #2a3d59;
+}
+header .dropDown .help {
+  display: none;
+}
+@media (max-width: 1400px) {
+  header .dropDown .help {
+    display: flex;
+  }
+}
+
+.sidebar {
+  display: flex;
+  min-width: 232px;
+  height: 100dvh;
+  background-color: #2a3647;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 64px;
+  z-index: 10;
+}
+@media (max-width: 1400px) {
+  .sidebar {
+    flex-direction: row;
+    padding-bottom: 0px;
+    width: 100%;
+    height: 80px;
+  }
+}
+
+.sidebarUpperPart {
+  padding-top: 64px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px;
+}
+@media (max-width: 1400px) {
+  .sidebarUpperPart {
+    padding-top: 0px;
+    justify-content: left;
+    align-items: center;
+  }
+}
+
+.joinLogo {
+  width: 100.03px;
+  height: 121.97px;
+}
+@media (max-width: 1400px) {
+  .joinLogo {
+    display: none;
+  }
+}
+
+.active {
+  background-color: #091931 !important;
+}
+
+#information {
+  padding-left: 52px;
+  gap: 8px;
+}
+#information a {
+  color: #a8a8a8;
+}
+#information a:hover {
+  color: #29abe2;
+}
+
+.sidebar-Block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .sidebar-Block {
+    flex-direction: row;
+    opacity: 100%;
+    max-width: 428px;
+    gap: 0;
+  }
+}
+
+.sidebar-Block a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  gap: 15px;
+  padding-block: 10px;
+  padding-inline: 56px;
+  opacity: 100%;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .sidebar-Block a {
+    display: flex;
+    line-height: 120%;
+    letter-spacing: 0%;
+    justify-content: space-evenly;
+    padding-inline: 0px;
+    vertical-align: top;
+    height: 76px;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    border-radius: 16px;
+  }
+}
+.sidebar-Block a svg {
+  height: 30px;
+  width: 30px;
+  fill: #cdcdcd;
+}
+.sidebar-Block a:hover {
+  background-color: #2a3d59;
+}
+
+#information {
+  display: flex;
+  flex-direction: column;
+  width: 121px;
+  height: 35px;
+  padding: 0;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  #information {
+    display: none;
+  }
+}
+#information a {
+  display: flex;
+  align-items: center;
+  padding-block: 5px;
+  padding-inline: 56px;
+  width: 100%;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  padding-top: 110px;
+  padding-left: 58px;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #f6f7f8;
+}
+@media (max-width: 1400px) {
+  .contactDetails {
+    display: none;
+    align-items: center;
+    padding-top: 16px;
+    padding-inline: 16px;
+  }
+}
+.contactDetails .contactDetailsBox {
+  max-height: calc(100dvh - 313px);
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox {
+    max-height: calc(100dvh - 251px);
+    max-width: 596px;
+  }
+}
+.contactDetails .contactDetailsBox .headings {
+  display: flex;
+  align-items: center;
+  max-height: 73px;
+  height: 100%;
+  max-width: 596px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .headings {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 82px;
+  }
+}
+.contactDetails .contactDetailsBox .headings .heading {
+  font-size: 61px;
+  font-weight: bold;
+}
+@media (max-width: 450px) {
+  .contactDetails .contactDetailsBox .headings .heading {
+    font-size: 45px;
+  }
+}
+.contactDetails .contactDetailsBox .headings .heading::after {
+  content: " ";
+  border-left: 3px solid #29abe2;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .headings .heading::after {
+    content: " ";
+    border-left: unset;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.contactDetails .contactDetailsBox .headings .subHeading {
+  font-size: 27px;
+  font-weight: 400;
+  color: #2a3647;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .headings .subHeading::after {
+    content: " ";
+    display: block;
+    width: 60%;
+    border-bottom: 3px solid #29abe2;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .contactDetails .contactDetailsBox .headings .subHeading {
+    font-size: 20px;
+  }
+}
+.contactDetails .contactDetailsBox .headings .switchMobileButton {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 16px;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .headings .switchMobileButton {
+    display: block;
+  }
+}
+.contactDetails .contactDetailsBox .headings .switchMobileButton svg {
+  height: 32px;
+  width: 32px;
+  fill: #29abe2;
+}
+.contactDetails .contactDetailsBox .headings .switchMobileButton:hover {
+  cursor: pointer;
+}
+.contactDetails .contactDetailsBox .userDetailPanel {
+  max-height: calc(100% - 100px);
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(1500px);
+  opacity: 0;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userDetailPanel {
+    transition: all 0s ease-in-out;
+    transform: translateX(0%);
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel.visible {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-height: 120px;
+  height: 100%;
+  width: 100%;
+  margin-top: 33px;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo {
+    gap: 20px;
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userInitials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 120px;
+  height: 100%;
+  max-width: 120px;
+  width: 100%;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  font-size: 47px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 120%;
+  letter-spacing: -3px;
+  padding-right: 3px;
+  text-align: center;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userInitials {
+    max-height: 80px;
+    max-width: 80px;
+    font-size: 27px;
+  }
+}
+@media (max-width: 450px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userInitials {
+    max-height: 60px;
+    max-width: 60px;
+    font-size: 20px;
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userName {
+  font-size: 47px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userName {
+    font-size: 27px;
+  }
+}
+@media (max-width: 450px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userName {
+    font-size: 20px;
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 112px;
+    right: 5px;
+    height: 100px;
+    width: 116px;
+    background-color: #ffffff;
+    border: 0px solid transparent;
+    border-radius: 20px 20px 0px 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .editButton,
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .deleteButton {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 120%;
+  background-color: unset;
+  border: unset;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .editButton,
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .deleteButton {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .editButton:hover,
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .deleteButton:hover {
+  cursor: pointer;
+  color: #29abe2;
+  fill: #29abe2;
+  font-weight: bold;
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .editButton svg,
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .deleteButton svg {
+  height: 24px;
+  width: 24px;
+}
+.contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .editButton {
+  width: 70px;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .userQuickInfo .userActions .userProfileButtons .editButton {
+    width: 100%;
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel .contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+}
+.contactDetails .contactDetailsBox .userDetailPanel .contactInfo .heading {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  max-width: 207px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .contactInfo .heading {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 450px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .contactInfo .heading {
+    font-size: 16px;
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel .contactInfo .contactEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contactDetails .contactDetailsBox .userDetailPanel .contactInfo .contactEmail .type {
+  font-size: 16px;
+  font-weight: bold;
+}
+.contactDetails .contactDetailsBox .userDetailPanel .contactInfo .contactEmail a {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 450px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .contactInfo .contactEmail a {
+    font-size: 14px;
+  }
+}
+.contactDetails .contactDetailsBox .userDetailPanel .contactInfo .contactPhone {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contactDetails .contactDetailsBox .userDetailPanel .contactInfo .contactPhone .type {
+  font-size: 16px;
+  font-weight: bold;
+}
+.contactDetails .contactDetailsBox .userDetailPanel .contactInfo .contactPhone a {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #000000;
+}
+@media (max-width: 450px) {
+  .contactDetails .contactDetailsBox .userDetailPanel .contactInfo .contactPhone a {
+    font-size: 14px;
+  }
+}
+.contactDetails .contactDetailsBox .userProfileButtonsMobile {
+  display: none;
+  position: absolute;
+  bottom: 132px;
+  right: 16px;
+  height: 56px;
+  width: 56px;
+  background-color: #2a3647;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  z-index: 20;
+}
+@media (max-width: 1400px) {
+  .contactDetails .contactDetailsBox .userProfileButtonsMobile {
+    display: block;
+  }
+}
+.contactDetails .contactDetailsBox .userProfileButtonsMobile:hover {
+  cursor: pointer;
+  background-color: #29abe2;
+}
+
+.addedUserFeedback {
+  width: 326px;
+  height: 74px;
+  border-radius: 20px;
+  background-color: #2a3647;
+  box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1490196078);
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 75dvh;
+  left: 100%;
+  transition: all 0.5s ease;
+  z-index: 5000;
+}
+.newTaskUserFeedback {
+  width: 326px;
+  height: 74px;
+  border-radius: 20px;
+  background-color: #2a3647;
+  box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1490196078);
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 750px;
+  left: 100%;
+  transition: all 0.5s ease;
+  z-index: 5000;
+}
+@media (max-width: 1400px) {
+  .newTaskUserFeedback {
+    top: 50%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.confirmDeleteUserModal {
+  position: absolute;
+  z-index: 10000;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.confirmDeleteUserModal .confirmDeleteUserContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 66px 48px;
+  width: 1000px;
+  height: 500px;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  background-color: #2a3647;
+  box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.1490196078);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+@media (max-width: 1400px) {
+  .confirmDeleteUserModal .confirmDeleteUserContainer {
+    height: 80dvh;
+    max-height: 760px;
+    width: 98%;
+    max-width: 396px;
+    justify-content: flex-end;
+    font-size: 19px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .confirmDeleteUserModal .confirmDeleteUserContainer {
+    height: 75dvh;
+    font-size: 16px;
+    padding: 16px 16px;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+}
+.confirmDeleteUserModal .confirmDeleteUserContainer .confirmDeleteUserTextBox p {
+  line-height: 2rem;
+}
+.confirmDeleteUserModal .confirmDeleteUserContainer .deleteModalLogo {
+  position: absolute;
+  left: 48px;
+  top: 48px;
+}
+@media (max-width: 1400px) {
+  .confirmDeleteUserModal .confirmDeleteUserContainer .deleteModalLogo {
+    left: 50%;
+    transform: translateX(-50%);
+    scale: 0.9;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .confirmDeleteUserModal .confirmDeleteUserContainer .deleteModalLogo {
+    display: none;
+  }
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox {
+  display: flex;
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox button:hover {
+  cursor: pointer;
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox .deleteCancelBtn {
+  gap: 4px;
+  padding: 15px 24px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 400;
+  color: #2a3647;
+  margin-right: 24px;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .confirmDeleteUserModal .confirmDeleteUserBtnBox .deleteCancelBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox .deleteCancelBtn:hover {
+  border: 1px solid #29abe2;
+  color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox .deleteCancelBtn:hover img {
+  filter: invert(46%) sepia(52%) saturate(2400%) hue-rotate(163deg) brightness(95%) contrast(101%);
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox .deleteBtn {
+  gap: 4px;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #29abe2;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .confirmDeleteUserModal .confirmDeleteUserBtnBox .deleteBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox .deleteBtn:hover {
+  background-color: white;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+  color: #29abe2;
+}
+.confirmDeleteUserModal .confirmDeleteUserBtnBox .deleteBtn:hover img {
+  filter: invert(46%) sepia(52%) saturate(2400%) hue-rotate(163deg) brightness(95%) contrast(101%);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+  max-width: 456px;
+  width: 100%;
+  padding-bottom: 32px;
+  overflow-y: scroll;
+  position: relative;
+  box-shadow: 0px 14px 10px 5px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  z-index: 100;
+}
+@media (max-width: 1400px) {
+  .contactList {
+    max-width: 100%;
+    z-index: 50;
+    box-shadow: unset;
+  }
+}
+.contactList .contactListHeader {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 22px;
+}
+@media (max-width: 1400px) {
+  .contactList .contactListHeader {
+    display: none;
+  }
+}
+.contactList .contactListHeader .newContactButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  min-height: 56px;
+  max-width: 352px;
+  width: 100%;
+  border: 0px solid transparent;
+  border-radius: 10px;
+  background-color: #2a3647;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 120%;
+}
+.contactList .contactListHeader .newContactButton svg {
+  height: 32px;
+  width: 32px;
+  fill: #ffffff;
+}
+.contactList .contactListHeader .newContactButton:hover {
+  cursor: pointer;
+  background-color: #29abe2 !important;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.contactList .contactListContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 400px;
+  width: 100%;
+}
+.contactList .contactListContent .alphabetSection {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding-left: 36px;
+  height: 58px;
+  max-width: 352px;
+  width: 100%;
+  line-height: 120%;
+}
+@media (max-width: 450px) {
+  .contactList .contactListContent .alphabetSection {
+    padding-left: 30px;
+  }
+}
+.contactList .contactListContent .horizontalLine {
+  height: 1px;
+  max-width: 352px;
+  width: 100%;
+  margin: 15px;
+  background-color: #d1d1d1;
+  border: unset;
+}
+.contactList .contactListContent .userListItem {
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  gap: 35px;
+  height: 78px;
+  width: 352px;
+  list-style-type: none;
+}
+@media (max-width: 450px) {
+  .contactList .contactListContent .userListItem {
+    width: 300px;
+    padding-left: 10px;
+  }
+}
+.contactList .contactListContent .userListItem .userInitials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: -1px;
+  color: #ffffff;
+  height: 42px;
+  width: 42px;
+  border: 2px solid white;
+  border-radius: 100%;
+  padding-right: 1px;
+}
+.contactList .contactListContent .userListItem .userProfile {
+  display: flex;
+  flex-direction: column;
+}
+.contactList .contactListContent .userListItem .userProfile .userName {
+  font-size: 20px;
+  color: #000000;
+  line-height: 120%;
+}
+.contactList .contactListContent .userListItem .userProfile .usersMail {
+  font-size: 16px;
+  color: #007cee;
+  line-height: 120%;
+}
+@media (max-width: 450px) {
+  .contactList .contactListContent .userListItem .userProfile .usersMail {
+    font-size: 12px;
+  }
+}
+.contactList .contactListContent .userListItem:hover {
+  cursor: pointer;
+  background: linear-gradient(rgb(240, 240, 240) 0%, rgb(249, 249, 249) 100%);
+  border: 0px solid transparent;
+  border-radius: 10px;
+}
+.contactList .contactListContent .userListItem:hover .userInitials {
+  border: 2px solid rgb(255, 255, 255);
+}
+.contactList .selectedUser {
+  background-color: #2a3647;
+  border-radius: 10px;
+}
+.contactList .selectedUser .userProfile .userName {
+  color: #ffffff !important;
+}
+.contactList .selectedUser:hover {
+  background: #2a3647 !important;
+}
+.contactList .newContactButtonMobile {
+  position: fixed;
+  right: 32px;
+  top: calc(100dvh - 172px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  min-width: 56px;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  background-color: #2a3647;
+}
+@media (max-width: 1400px) {
+  .contactList .newContactButtonMobile {
+    display: flex;
+  }
+}
+.contactList .newContactButtonMobile svg {
+  height: 32px;
+  width: 32px;
+  fill: #ffffff;
+}
+.contactList .newContactButtonMobile:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.contactModal {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.addContactContainer {
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+  width: 1212px;
+  height: 592px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+}
+@media (max-width: 1400px) {
+  .addContactContainer {
+    height: 80%;
+    max-height: 760px;
+    width: 100%;
+    max-width: 396px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainer {
+    height: 70%;
+    max-height: 760px;
+    width: 100%;
+    max-width: 396px;
+    flex-direction: column;
+  }
+}
+.addContactContainer .modalLogo {
+  z-index: 1;
+  position: absolute;
+  top: 150px;
+  left: 48px;
+  height: 66.48px;
+  width: 55.6px;
+}
+@media (max-width: 1400px) {
+  .addContactContainer .modalLogo {
+    display: none;
+  }
+}
+.addContactContainer .closeModal {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  position: absolute;
+  top: 48px;
+  left: 1132px;
+  z-index: 500;
+}
+.addContactContainer .closeModal:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1400px) {
+  .addContactContainer .closeModal {
+    top: 24px;
+    left: calc(100% - 56px);
+    filter: invert(100%) brightness(200%);
+  }
+  .addContactContainer .closeModal:hover {
+    background: none;
+  }
+}
+
+.addContactContainerLeft {
+  max-width: 467px;
+  height: 100%;
+  padding: 66px 48px;
+  background-color: #2a3647;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .addContactContainerLeft {
+    width: 100%;
+    max-height: 352px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 30px;
+    padding: 66px 24px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerLeft {
+    width: 100%;
+    max-height: 310px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 30px;
+    padding: 48px 16px;
+  }
+}
+.addContactContainerLeft .newUserLogo {
+  width: 126px;
+  height: 126px;
+  border-radius: 63px;
+  position: absolute;
+  top: 204px;
+  left: 550px;
+  color: white;
+  font-size: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addContactContainerLeft .newUserLogo span {
+  font-size: 47px;
+  margin: 0;
+}
+@media (max-width: 1400px) {
+  .addContactContainerLeft .newUserLogo {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerLeft .newUserLogo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+  }
+}
+.addContactContainerLeft h1 {
+  font-size: 61px;
+  font-weight: 700;
+}
+@media (max-width: 1400px) {
+  .addContactContainerLeft h1 {
+    font-size: 47px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerLeft h1 {
+    font-size: 32px;
+  }
+}
+.addContactContainerLeft span {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1400px) {
+  .addContactContainerLeft span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerLeft span {
+    font-size: 16px;
+  }
+}
+.addContactContainerLeft .vector {
+  width: 90px;
+  height: 2px;
+  background-color: #29abe2;
+  margin-top: 12px;
+}
+
+.userInitialsBorder {
+  border: 3px solid white;
+}
+
+.addContactContainerRight {
+  width: 745px;
+  height: 100%;
+  padding: 66px 48px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media (max-width: 1400px) {
+  .addContactContainerRight {
+    width: 100%;
+    align-items: center;
+    padding: 66px 24px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerRight {
+    padding: 48px 16px;
+  }
+}
+.addContactContainerRight .modalInputsContainer {
+  width: 422px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1400px) {
+  .addContactContainerRight .modalInputsContainer {
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerRight .modalInputsContainer {
+    margin-top: 18px;
+  }
+}
+.addContactContainerRight .modalInputsContainer p {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerRight .modalInputsContainer p {
+    font-size: 8px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+  }
+}
+.addContactContainerRight .modalInputsContainer input {
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 13px 21px;
+  font-size: 20px;
+  background-position: 95%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1400px) {
+  .addContactContainerRight .modalInputsContainer input {
+    height: 41px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerRight .modalInputsContainer input {
+    height: 32px;
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+}
+.addContactContainerRight .modalInputsContainer input[type=text] {
+  background-image: url("/assets/icons/inputName.svg");
+}
+.addContactContainerRight .modalInputsContainer input[type=email] {
+  background-image: url("/assets/icons/inputEmail.svg");
+}
+.addContactContainerRight .modalInputsContainer input[type=tel] {
+  background-image: url("/assets/icons/inputTel.svg");
+}
+.addContactContainerRight .modalInputsBtnContainer {
+  max-width: 422px;
+  display: flex;
+}
+@media (max-width: 1400px) {
+  .addContactContainerRight .modalInputsBtnContainer {
+    justify-content: center;
+  }
+}
+.addContactContainerRight .modalInputsBtnContainer .cancelBtn {
+  gap: 4px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 400;
+  color: #2a3647;
+  margin-right: 24px;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .addContactContainerRight .modalInputsBtnContainer .cancelBtn {
+    display: none;
+  }
+}
+.addContactContainerRight .modalInputsBtnContainer .cancelBtn:hover {
+  border: 1px solid #29abe2;
+  color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.addContactContainerRight .modalInputsBtnContainer .cancelBtn:hover img {
+  filter: invert(46%) sepia(52%) saturate(2400%) hue-rotate(163deg) brightness(95%) contrast(101%);
+}
+.addContactContainerRight .modalInputsBtnContainer .createBtn {
+  gap: 4px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2a3647;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+.addContactContainerRight .modalInputsBtnContainer .createBtn:hover {
+  background-color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addContactContainerRight .modalInputsBtnContainer .createBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+
+.editDeleteBtn {
+  gap: 4px;
+  padding: 15px 24px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 400;
+  color: #2a3647;
+  margin-right: 24px;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .editDeleteBtn {
+    padding: 18px 10px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .editDeleteBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+.editDeleteBtn:hover {
+  border: 1px solid #29abe2;
+  color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.editDeleteBtn:hover img {
+  filter: invert(46%) sepia(52%) saturate(2400%) hue-rotate(163deg) brightness(95%) contrast(101%);
+}
+
+.editSaveBtn {
+  gap: 4px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2a3647;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .editSaveBtn {
+    padding: 18px 10px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .editSaveBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+.editSaveBtn:hover {
+  background-color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.currentUserInitials {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1400px) {
+  .boardWrapper {
+    height: calc(100dvh - 160px);
+    overflow-y: auto;
+  }
+}
+
+.board {
+  width: 100%;
+  max-width: 1208px;
+  height: 208px;
+  padding: 79px 64px 55px 64px;
+}
+@media (max-width: 1400px) {
+  .board {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    gap: 40px;
+    padding: 48px 16px 24px 16px;
+  }
+}
+.board .boardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .board .boardContainer {
+    flex-direction: column;
+    width: 396px;
+  }
+}
+.board .boardContainer .boardLeft {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1400px) {
+  .board .boardContainer .boardLeft {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.board .boardContainer .boardLeft p {
+  font-size: 61px;
+  font-weight: 700;
+}
+.board .boardContainer .boardLeft button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #2a3647;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+@media (max-width: 1400px) {
+  .board .boardContainer .boardLeft button {
+    display: flex;
+  }
+  .board .boardContainer .boardLeft button svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
+}
+.board .boardContainer .boardRight {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+@media (max-width: 1400px) {
+  .board .boardContainer .boardRight {
+    width: 100%;
+  }
+}
+.board .boardContainer .boardRight .taskSearchFieldContainer {
+  display: flex;
+  align-items: center;
+  width: 312px;
+  border-radius: 10px;
+  border: 1px solid #a8a8a8;
+  padding: 8px 16px;
+}
+@media (max-width: 1400px) {
+  .board .boardContainer .boardRight .taskSearchFieldContainer {
+    width: 100%;
+  }
+}
+.board .boardContainer .boardRight .taskSearchFieldContainer input {
+  width: 100%;
+  border: none;
+  border-right: 1px solid #a8a8a8;
+  background-color: transparent;
+  outline: none;
+  line-height: 24px;
+  font-size: 20px;
+}
+.board .boardContainer .boardRight .taskSearchFieldContainer input::-moz-placeholder {
+  color: #a8a8a8;
+}
+.board .boardContainer .boardRight .taskSearchFieldContainer input::placeholder {
+  color: #a8a8a8;
+}
+.board .boardContainer .boardRight .taskSearchFieldContainer button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+  border: none;
+  background-color: transparent;
+}
+.board .boardContainer .boardRight .taskSearchFieldContainer button svg {
+  width: 18px;
+  height: 18px;
+  fill: #2a3647;
+}
+.board .boardContainer .boardRight .boardTaskAddBtnLarge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px 8px 16px;
+  border-radius: 10px;
+  background-color: #2a3647;
+  color: white;
+  border: none;
+}
+@media (max-width: 1400px) {
+  .board .boardContainer .boardRight .boardTaskAddBtnLarge {
+    display: none;
+  }
+}
+.board .boardContainer .boardRight .boardTaskAddBtnLarge p {
+  font-size: 21px;
+  font-weight: 700;
+}
+.board .boardContainer .boardRight .boardTaskAddBtnLarge div {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.board .boardContainer .boardRight .boardTaskAddBtnLarge div svg {
+  width: 19px;
+  height: 19px;
+  fill: #ffffff;
+}
+
+.addTaskWrapper {
+  background-color: rgb(246, 247, 248);
+  height: calc(100dvh - 96px);
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+@media (max-width: 1400px) {
+  .addTaskWrapper {
+    height: calc(100dvh - 80px - 80px);
+  }
+}
+
+.marginMinusFourteenPx {
+  margin-bottom: -14px;
+}
+@media (max-width: 1400px) {
+  .marginMinusFourteenPx {
+    width: 100%;
+  }
+}
+
+.addTaskValidationWarning {
+  line-height: 14px;
+}
+.addTaskValidationWarning span {
+  color: red;
+  font-size: 12px;
+}
+
+.addTaskContainer {
+  width: 100%;
+  height: 100%;
+  padding: 80px 96px 48px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+  overflow-y: auto;
+}
+@media (max-width: 1400px) {
+  .addTaskContainer {
+    max-height: calc(100dvh - 80px - 80px);
+    padding: 80px 48px 96px 48px;
+    align-items: center;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 600px) {
+  .addTaskContainer {
+    padding: 64px 16px 64px 16px;
+  }
+}
+@media (max-width: 400px) {
+  .addTaskContainer {
+    padding: 16px 8px;
+  }
+}
+.addTaskContainer .closeModal {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  position: absolute;
+  top: 48px;
+  right: 100px;
+  z-index: 500;
+}
+.addTaskContainer .closeModal:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.addTaskContainer h1 {
+  font-size: 61px;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .addTaskContainer h1 {
+    font-size: 50px;
+  }
+}
+.addTaskContainer .marginMinusFourteenPx {
+  margin-bottom: -14px;
+}
+.addTaskContainer .addTaskValidationWarning {
+  line-height: 14px;
+}
+.addTaskContainer .addTaskValidationWarning span {
+  color: red;
+  font-size: 12px;
+}
+.addTaskContainer .addTaskMiddleContent {
+  margin-top: 48px;
+  margin-bottom: 146px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1400px) {
+  .addTaskContainer .addTaskMiddleContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent p {
+  font-size: 20px;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent p {
+    font-size: 18px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent input {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 20px;
+  outline: none;
+}
+.addTaskContainer .addTaskMiddleContent input:focus {
+  border: 1px solid #29abe2;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent input {
+    height: 41px;
+    font-size: 16px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 488px;
+  padding-right: 48px;
+}
+@media (max-width: 1400px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft {
+    padding-right: 0px;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 20px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  resize: none;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft textarea:focus {
+  outline: none;
+  border: 1px solid #29abe2 !important;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft textarea {
+    font-size: 16px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .assignedToContainer {
+  position: relative;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .assignedToDropdown {
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  padding-left: 0px;
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .assignedToDropdown {
+    height: 41px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .assignedToDropdown .searchUserToAssign {
+  padding: 0;
+  border: none;
+  height: 47px;
+  width: 80%;
+  outline: none;
+  padding-left: 16px;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .assignedToDropdown .searchUserToAssign {
+    height: 37px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .assignedToDropdown .assignedToDropdownArrow {
+  rotate: 180deg;
+  border-radius: 12px;
+  transition: all 0.1s ease-in;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .assignedToDropdown .assignedToDropdownArrow:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.5725490196);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .assignedToDropdown .rotatedArrow {
+  rotate: 0deg;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign {
+  height: 180px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  overflow-y: auto;
+  position: absolute;
+  top: 102%;
+  left: 0;
+  z-index: 2;
+}
+@media (max-width: 1400px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign {
+    position: relative;
+    top: 0;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign .userListItem {
+  padding: 7px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 5px;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign .userListItem.checked {
+  color: white;
+  background-color: #2a3647;
+  border-radius: 10px;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign .userListItem .userCheckbox:hover {
+  cursor: pointer;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign .userListItem:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #091931;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign .userListItem p {
+    font-size: 14px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign .userListItem input {
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign .userListItem .initialsNameWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .contactsToAssign .userListItem .initialsNameWrapper .initialsBox {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .currentAssignation {
+  height: 120px;
+  width: 100%;
+  padding: 7px 0px;
+  position: absolute;
+  top: 101%;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  overflow-y: auto;
+}
+@media (max-width: 1400px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .currentAssignation {
+    position: relative;
+    height: auto;
+    top: 0;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleLeft .currentAssignation .initialsBox {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskSeparator {
+  width: 2px;
+  height: 424px;
+  background-color: #d1d1d1;
+}
+@media (max-width: 1400px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskSeparator {
+    display: none;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 488px;
+  padding-left: 48px;
+}
+@media (max-width: 1400px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight {
+    padding-left: 0px;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 400px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities {
+  width: 136px;
+  padding: 16px 10px;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities {
+    width: 70%;
+    padding: 10px 10px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities:hover {
+  cursor: pointer;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities.urgentPrio {
+  background-color: #ff3d00;
+  cursor: auto;
+  box-shadow: none;
+  color: white;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities.urgentPrio img {
+  filter: brightness(0) invert(1);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities.mediumPrio {
+  background-color: #ffa800;
+  cursor: auto;
+  box-shadow: none;
+  color: white;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities.mediumPrio img {
+  filter: brightness(0) invert(1);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities.lowPrio {
+  background-color: #7ae229;
+  cursor: auto;
+  box-shadow: none;
+  color: white;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .prioContainer .priorities.lowPrio img {
+  filter: brightness(0) invert(1);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown {
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown {
+    height: 41px;
+    font-size: 16px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown .categoryDropdownArrow {
+  rotate: 180deg;
+  border-radius: 12px;
+  transition: all 0.1s ease-in;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown .categoryDropdownArrow:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.5725490196);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown .rotatedArrow {
+  rotate: 0deg;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown .categorySelectionContainer {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  transition: all 0.1s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown .categorySelectionContainer {
+    top: 40px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown .categorySelectionContainer p {
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown .categorySelectionContainer p {
+    font-size: 16px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .categoryDropdown .categorySelectionContainer p:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.5725490196);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer {
+  position: relative;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer svg {
+  min-height: 8px !important;
+  min-width: 8px !important;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskInputContainer {
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  padding-left: 0px;
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskInputContainer {
+    height: 41px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskInputContainer .subtaskInput {
+  width: 80%;
+  height: 48px;
+  outline: none;
+  border: none;
+  padding: 0;
+  padding-left: 16px;
+  font-size: 20px;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskInputContainer .subtaskInput {
+    height: 37px;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskInputContainer .newSubtaskPlusBtn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskInputContainer .newSubtaskPlusBtn:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.5725490196);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer {
+  max-height: 120px;
+  width: 100%;
+  padding: 7px 0px;
+  position: absolute;
+  top: 101%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer {
+    position: relative;
+  }
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox {
+  width: 100%;
+  padding: 0px 16px;
+  min-height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.5725490196);
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox:hover .subtaskActionBox {
+  display: flex;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .dotBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .dotBox svg {
+  padding: 0;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: none;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox div svg:hover {
+  cursor: pointer;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox .subtaskSeparator {
+  width: 2px;
+  height: 24px;
+  background-color: #a8a8a8;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox {
+  width: 100%;
+  height: 30px;
+  padding: 4px 16px;
+  background-color: white;
+  border-bottom: 1px solid #29abe2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .editSubtaskInput {
+  width: 80%;
+  height: 98%;
+  outline: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox div svg:hover {
+  cursor: pointer;
+}
+.addTaskContainer .addTaskMiddleContent .addTaskMiddleRight .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox .subtaskSeparator {
+  width: 2px;
+  height: 24px;
+  background-color: #a8a8a8;
+}
+.addTaskContainer .addTaskBottomContainer {
+  width: 976px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (max-width: 1400px) {
+  .addTaskContainer .addTaskBottomContainer {
+    max-width: 488px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskBottomContainer {
+    max-width: 100%;
+  }
+}
+.addTaskContainer .addTaskBottomContainer .taskBtnContainer {
+  display: flex;
+}
+.addTaskContainer .addTaskBottomContainer .taskBtnContainer .clearBtn {
+  gap: 4px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 400;
+  color: #2a3647;
+  margin-right: 24px;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskBottomContainer .taskBtnContainer .clearBtn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .addTaskContainer .addTaskBottomContainer .taskBtnContainer .clearBtn {
+    padding: 12px 12px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addTaskContainer .addTaskBottomContainer .taskBtnContainer .clearBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+.addTaskContainer .addTaskBottomContainer .taskBtnContainer .clearBtn:hover {
+  border: 1px solid #29abe2;
+  color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.addTaskContainer .addTaskBottomContainer .taskBtnContainer .clearBtn:hover img {
+  filter: invert(46%) sepia(52%) saturate(2400%) hue-rotate(163deg) brightness(95%) contrast(101%);
+}
+.addTaskContainer .addTaskBottomContainer .taskBtnContainer .createBtn {
+  gap: 4px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2a3647;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+.addTaskContainer .addTaskBottomContainer .taskBtnContainer .createBtn:hover {
+  background-color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 600px) {
+  .addTaskContainer .addTaskBottomContainer .taskBtnContainer .createBtn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .addTaskContainer .addTaskBottomContainer .taskBtnContainer .createBtn {
+    padding: 12px 12px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .addTaskContainer .addTaskBottomContainer .taskBtnContainer .createBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+
+.taskModalBackground {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1400px) {
+  .taskModalBackground {
+    display: none;
+  }
+}
+
+.addTaskModalContainer {
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+  width: 1180px;
+  height: 840px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addTaskModalContainer .addTaskContainer {
+  justify-content: center;
+  align-items: center;
+}
+
+.taskCards {
+  display: flex;
+  height: calc(100dvh - 304px);
+  padding-bottom: 16px;
+  overflow-y: auto;
+  max-width: 1208px;
+  padding-inline: 64px;
+  gap: 24px;
+}
+@media (max-width: 1400px) {
+  .taskCards {
+    flex-direction: column;
+    padding-inline: 8px;
+    height: calc(100dvh - 368px);
+    overflow: visible;
+  }
+}
+.taskCards .todoCardsContainer,
+.taskCards .inProgressCardsContainer,
+.taskCards .awaitFeedbackCardsContainer,
+.taskCards .doneCardsContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+.taskCards .todoCardsContainer .todoMenu,
+.taskCards .todoCardsContainer .inProgressMenu,
+.taskCards .todoCardsContainer .awaitFeedbackMenu,
+.taskCards .todoCardsContainer .doneMenu,
+.taskCards .inProgressCardsContainer .todoMenu,
+.taskCards .inProgressCardsContainer .inProgressMenu,
+.taskCards .inProgressCardsContainer .awaitFeedbackMenu,
+.taskCards .inProgressCardsContainer .doneMenu,
+.taskCards .awaitFeedbackCardsContainer .todoMenu,
+.taskCards .awaitFeedbackCardsContainer .inProgressMenu,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackMenu,
+.taskCards .awaitFeedbackCardsContainer .doneMenu,
+.taskCards .doneCardsContainer .todoMenu,
+.taskCards .doneCardsContainer .inProgressMenu,
+.taskCards .doneCardsContainer .awaitFeedbackMenu,
+.taskCards .doneCardsContainer .doneMenu {
+  margin-bottom: 15px;
+}
+.taskCards .todoCardsContainer .todoMenu .categoryMenu,
+.taskCards .todoCardsContainer .inProgressMenu .categoryMenu,
+.taskCards .todoCardsContainer .awaitFeedbackMenu .categoryMenu,
+.taskCards .todoCardsContainer .doneMenu .categoryMenu,
+.taskCards .inProgressCardsContainer .todoMenu .categoryMenu,
+.taskCards .inProgressCardsContainer .inProgressMenu .categoryMenu,
+.taskCards .inProgressCardsContainer .awaitFeedbackMenu .categoryMenu,
+.taskCards .inProgressCardsContainer .doneMenu .categoryMenu,
+.taskCards .awaitFeedbackCardsContainer .todoMenu .categoryMenu,
+.taskCards .awaitFeedbackCardsContainer .inProgressMenu .categoryMenu,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackMenu .categoryMenu,
+.taskCards .awaitFeedbackCardsContainer .doneMenu .categoryMenu,
+.taskCards .doneCardsContainer .todoMenu .categoryMenu,
+.taskCards .doneCardsContainer .inProgressMenu .categoryMenu,
+.taskCards .doneCardsContainer .awaitFeedbackMenu .categoryMenu,
+.taskCards .doneCardsContainer .doneMenu .categoryMenu {
+  display: flex;
+  justify-content: space-between;
+}
+.taskCards .todoCardsContainer .todoMenu .categoryMenu .title,
+.taskCards .todoCardsContainer .inProgressMenu .categoryMenu .title,
+.taskCards .todoCardsContainer .awaitFeedbackMenu .categoryMenu .title,
+.taskCards .todoCardsContainer .doneMenu .categoryMenu .title,
+.taskCards .inProgressCardsContainer .todoMenu .categoryMenu .title,
+.taskCards .inProgressCardsContainer .inProgressMenu .categoryMenu .title,
+.taskCards .inProgressCardsContainer .awaitFeedbackMenu .categoryMenu .title,
+.taskCards .inProgressCardsContainer .doneMenu .categoryMenu .title,
+.taskCards .awaitFeedbackCardsContainer .todoMenu .categoryMenu .title,
+.taskCards .awaitFeedbackCardsContainer .inProgressMenu .categoryMenu .title,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackMenu .categoryMenu .title,
+.taskCards .awaitFeedbackCardsContainer .doneMenu .categoryMenu .title,
+.taskCards .doneCardsContainer .todoMenu .categoryMenu .title,
+.taskCards .doneCardsContainer .inProgressMenu .categoryMenu .title,
+.taskCards .doneCardsContainer .awaitFeedbackMenu .categoryMenu .title,
+.taskCards .doneCardsContainer .doneMenu .categoryMenu .title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 120%;
+}
+.taskCards .todoCardsContainer .todoMenu .categoryMenu .addTask,
+.taskCards .todoCardsContainer .inProgressMenu .categoryMenu .addTask,
+.taskCards .todoCardsContainer .awaitFeedbackMenu .categoryMenu .addTask,
+.taskCards .todoCardsContainer .doneMenu .categoryMenu .addTask,
+.taskCards .inProgressCardsContainer .todoMenu .categoryMenu .addTask,
+.taskCards .inProgressCardsContainer .inProgressMenu .categoryMenu .addTask,
+.taskCards .inProgressCardsContainer .awaitFeedbackMenu .categoryMenu .addTask,
+.taskCards .inProgressCardsContainer .doneMenu .categoryMenu .addTask,
+.taskCards .awaitFeedbackCardsContainer .todoMenu .categoryMenu .addTask,
+.taskCards .awaitFeedbackCardsContainer .inProgressMenu .categoryMenu .addTask,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackMenu .categoryMenu .addTask,
+.taskCards .awaitFeedbackCardsContainer .doneMenu .categoryMenu .addTask,
+.taskCards .doneCardsContainer .todoMenu .categoryMenu .addTask,
+.taskCards .doneCardsContainer .inProgressMenu .categoryMenu .addTask,
+.taskCards .doneCardsContainer .awaitFeedbackMenu .categoryMenu .addTask,
+.taskCards .doneCardsContainer .doneMenu .categoryMenu .addTask {
+  border: 2px solid #2a3647;
+  border-radius: 8px;
+  padding: 3px;
+  width: 24px;
+  height: 24px;
+}
+.taskCards .todoCardsContainer .todoMenu .categoryMenu .addTask svg,
+.taskCards .todoCardsContainer .inProgressMenu .categoryMenu .addTask svg,
+.taskCards .todoCardsContainer .awaitFeedbackMenu .categoryMenu .addTask svg,
+.taskCards .todoCardsContainer .doneMenu .categoryMenu .addTask svg,
+.taskCards .inProgressCardsContainer .todoMenu .categoryMenu .addTask svg,
+.taskCards .inProgressCardsContainer .inProgressMenu .categoryMenu .addTask svg,
+.taskCards .inProgressCardsContainer .awaitFeedbackMenu .categoryMenu .addTask svg,
+.taskCards .inProgressCardsContainer .doneMenu .categoryMenu .addTask svg,
+.taskCards .awaitFeedbackCardsContainer .todoMenu .categoryMenu .addTask svg,
+.taskCards .awaitFeedbackCardsContainer .inProgressMenu .categoryMenu .addTask svg,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackMenu .categoryMenu .addTask svg,
+.taskCards .awaitFeedbackCardsContainer .doneMenu .categoryMenu .addTask svg,
+.taskCards .doneCardsContainer .todoMenu .categoryMenu .addTask svg,
+.taskCards .doneCardsContainer .inProgressMenu .categoryMenu .addTask svg,
+.taskCards .doneCardsContainer .awaitFeedbackMenu .categoryMenu .addTask svg,
+.taskCards .doneCardsContainer .doneMenu .categoryMenu .addTask svg {
+  fill: #2a3647;
+  width: 12px;
+  height: 12px;
+}
+.taskCards .todoCardsContainer .todoMenu .categoryMenu .addTask:hover,
+.taskCards .todoCardsContainer .inProgressMenu .categoryMenu .addTask:hover,
+.taskCards .todoCardsContainer .awaitFeedbackMenu .categoryMenu .addTask:hover,
+.taskCards .todoCardsContainer .doneMenu .categoryMenu .addTask:hover,
+.taskCards .inProgressCardsContainer .todoMenu .categoryMenu .addTask:hover,
+.taskCards .inProgressCardsContainer .inProgressMenu .categoryMenu .addTask:hover,
+.taskCards .inProgressCardsContainer .awaitFeedbackMenu .categoryMenu .addTask:hover,
+.taskCards .inProgressCardsContainer .doneMenu .categoryMenu .addTask:hover,
+.taskCards .awaitFeedbackCardsContainer .todoMenu .categoryMenu .addTask:hover,
+.taskCards .awaitFeedbackCardsContainer .inProgressMenu .categoryMenu .addTask:hover,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackMenu .categoryMenu .addTask:hover,
+.taskCards .awaitFeedbackCardsContainer .doneMenu .categoryMenu .addTask:hover,
+.taskCards .doneCardsContainer .todoMenu .categoryMenu .addTask:hover,
+.taskCards .doneCardsContainer .inProgressMenu .categoryMenu .addTask:hover,
+.taskCards .doneCardsContainer .awaitFeedbackMenu .categoryMenu .addTask:hover,
+.taskCards .doneCardsContainer .doneMenu .categoryMenu .addTask:hover {
+  cursor: pointer;
+  border: 2px solid #29abe2;
+}
+.taskCards .todoCardsContainer .todoMenu .categoryMenu .addTask:hover svg,
+.taskCards .todoCardsContainer .inProgressMenu .categoryMenu .addTask:hover svg,
+.taskCards .todoCardsContainer .awaitFeedbackMenu .categoryMenu .addTask:hover svg,
+.taskCards .todoCardsContainer .doneMenu .categoryMenu .addTask:hover svg,
+.taskCards .inProgressCardsContainer .todoMenu .categoryMenu .addTask:hover svg,
+.taskCards .inProgressCardsContainer .inProgressMenu .categoryMenu .addTask:hover svg,
+.taskCards .inProgressCardsContainer .awaitFeedbackMenu .categoryMenu .addTask:hover svg,
+.taskCards .inProgressCardsContainer .doneMenu .categoryMenu .addTask:hover svg,
+.taskCards .awaitFeedbackCardsContainer .todoMenu .categoryMenu .addTask:hover svg,
+.taskCards .awaitFeedbackCardsContainer .inProgressMenu .categoryMenu .addTask:hover svg,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackMenu .categoryMenu .addTask:hover svg,
+.taskCards .awaitFeedbackCardsContainer .doneMenu .categoryMenu .addTask:hover svg,
+.taskCards .doneCardsContainer .todoMenu .categoryMenu .addTask:hover svg,
+.taskCards .doneCardsContainer .inProgressMenu .categoryMenu .addTask:hover svg,
+.taskCards .doneCardsContainer .awaitFeedbackMenu .categoryMenu .addTask:hover svg,
+.taskCards .doneCardsContainer .doneMenu .categoryMenu .addTask:hover svg {
+  fill: #29abe2;
+}
+.taskCards .todoCardsContainer .todoCards,
+.taskCards .todoCardsContainer .inProgressCards,
+.taskCards .todoCardsContainer .awaitFeedbackCards,
+.taskCards .todoCardsContainer .doneCards,
+.taskCards .inProgressCardsContainer .todoCards,
+.taskCards .inProgressCardsContainer .inProgressCards,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards,
+.taskCards .inProgressCardsContainer .doneCards,
+.taskCards .awaitFeedbackCardsContainer .todoCards,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards,
+.taskCards .awaitFeedbackCardsContainer .doneCards,
+.taskCards .doneCardsContainer .todoCards,
+.taskCards .doneCardsContainer .inProgressCards,
+.taskCards .doneCardsContainer .awaitFeedbackCards,
+.taskCards .doneCardsContainer .doneCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 1400px) {
+  .taskCards .todoCardsContainer .todoCards,
+  .taskCards .todoCardsContainer .inProgressCards,
+  .taskCards .todoCardsContainer .awaitFeedbackCards,
+  .taskCards .todoCardsContainer .doneCards,
+  .taskCards .inProgressCardsContainer .todoCards,
+  .taskCards .inProgressCardsContainer .inProgressCards,
+  .taskCards .inProgressCardsContainer .awaitFeedbackCards,
+  .taskCards .inProgressCardsContainer .doneCards,
+  .taskCards .awaitFeedbackCardsContainer .todoCards,
+  .taskCards .awaitFeedbackCardsContainer .inProgressCards,
+  .taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards,
+  .taskCards .awaitFeedbackCardsContainer .doneCards,
+  .taskCards .doneCardsContainer .todoCards,
+  .taskCards .doneCardsContainer .inProgressCards,
+  .taskCards .doneCardsContainer .awaitFeedbackCards,
+  .taskCards .doneCardsContainer .doneCards {
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
+.taskCards .todoCardsContainer .todoCards .cardsFallback,
+.taskCards .todoCardsContainer .inProgressCards .cardsFallback,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsFallback,
+.taskCards .todoCardsContainer .doneCards .cardsFallback,
+.taskCards .inProgressCardsContainer .todoCards .cardsFallback,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsFallback,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsFallback,
+.taskCards .inProgressCardsContainer .doneCards .cardsFallback,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsFallback,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsFallback,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsFallback,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsFallback,
+.taskCards .doneCardsContainer .todoCards .cardsFallback,
+.taskCards .doneCardsContainer .inProgressCards .cardsFallback,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsFallback,
+.taskCards .doneCardsContainer .doneCards .cardsFallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e7e7;
+  border: 1px dotted #a8a8a8;
+  border-radius: 10px;
+  height: 48px;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .taskCards .todoCardsContainer .todoCards .cardsFallback,
+  .taskCards .todoCardsContainer .inProgressCards .cardsFallback,
+  .taskCards .todoCardsContainer .awaitFeedbackCards .cardsFallback,
+  .taskCards .todoCardsContainer .doneCards .cardsFallback,
+  .taskCards .inProgressCardsContainer .todoCards .cardsFallback,
+  .taskCards .inProgressCardsContainer .inProgressCards .cardsFallback,
+  .taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsFallback,
+  .taskCards .inProgressCardsContainer .doneCards .cardsFallback,
+  .taskCards .awaitFeedbackCardsContainer .todoCards .cardsFallback,
+  .taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsFallback,
+  .taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsFallback,
+  .taskCards .awaitFeedbackCardsContainer .doneCards .cardsFallback,
+  .taskCards .doneCardsContainer .todoCards .cardsFallback,
+  .taskCards .doneCardsContainer .inProgressCards .cardsFallback,
+  .taskCards .doneCardsContainer .awaitFeedbackCards .cardsFallback,
+  .taskCards .doneCardsContainer .doneCards .cardsFallback {
+    width: 252px;
+    height: 48px;
+  }
+}
+.taskCards .todoCardsContainer .todoCards .cardsFallback .fallbackText,
+.taskCards .todoCardsContainer .inProgressCards .cardsFallback .fallbackText,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsFallback .fallbackText,
+.taskCards .todoCardsContainer .doneCards .cardsFallback .fallbackText,
+.taskCards .inProgressCardsContainer .todoCards .cardsFallback .fallbackText,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsFallback .fallbackText,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsFallback .fallbackText,
+.taskCards .inProgressCardsContainer .doneCards .cardsFallback .fallbackText,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsFallback .fallbackText,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsFallback .fallbackText,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsFallback .fallbackText,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsFallback .fallbackText,
+.taskCards .doneCardsContainer .todoCards .cardsFallback .fallbackText,
+.taskCards .doneCardsContainer .inProgressCards .cardsFallback .fallbackText,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsFallback .fallbackText,
+.taskCards .doneCardsContainer .doneCards .cardsFallback .fallbackText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #a8a8a8;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer,
+.taskCards .todoCardsContainer .doneCards .cardsContainer,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer,
+.taskCards .doneCardsContainer .todoCards .cardsContainer,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer,
+.taskCards .doneCardsContainer .doneCards .cardsContainer {
+  display: flex;
+  gap: 26px;
+}
+@media (max-width: 1400px) {
+  .taskCards .todoCardsContainer .todoCards .cardsContainer,
+  .taskCards .todoCardsContainer .inProgressCards .cardsContainer,
+  .taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer,
+  .taskCards .todoCardsContainer .doneCards .cardsContainer,
+  .taskCards .inProgressCardsContainer .todoCards .cardsContainer,
+  .taskCards .inProgressCardsContainer .inProgressCards .cardsContainer,
+  .taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer,
+  .taskCards .inProgressCardsContainer .doneCards .cardsContainer,
+  .taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer,
+  .taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer,
+  .taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer,
+  .taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer,
+  .taskCards .doneCardsContainer .todoCards .cardsContainer,
+  .taskCards .doneCardsContainer .inProgressCards .cardsContainer,
+  .taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer,
+  .taskCards .doneCardsContainer .doneCards .cardsContainer {
+    flex-direction: column;
+  }
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .taskCards .todoCardsContainer .todoCards .cardsContainer .card,
+  .taskCards .todoCardsContainer .inProgressCards .cardsContainer .card,
+  .taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card,
+  .taskCards .todoCardsContainer .doneCards .cardsContainer .card,
+  .taskCards .inProgressCardsContainer .todoCards .cardsContainer .card,
+  .taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card,
+  .taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card,
+  .taskCards .inProgressCardsContainer .doneCards .cardsContainer .card,
+  .taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card,
+  .taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card,
+  .taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card,
+  .taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card,
+  .taskCards .doneCardsContainer .todoCards .cardsContainer .card,
+  .taskCards .doneCardsContainer .inProgressCards .cardsContainer .card,
+  .taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card,
+  .taskCards .doneCardsContainer .doneCards .cardsContainer .card {
+    flex-grow: 0;
+    width: 252px;
+    height: auto;
+  }
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card:hover,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card:hover,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card:hover,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card:hover,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card:hover,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card:hover,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card:hover,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card:hover,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card:hover,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card:hover,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card:hover,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card:hover,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card:hover,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card:hover,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card:hover,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card:hover {
+  cursor: grab;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .taskHeader,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .taskHeader,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .taskHeader,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .taskHeader,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .taskHeader,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .taskHeader,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .taskHeader,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .taskHeader,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .taskHeader,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .taskHeader,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .taskHeader,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .taskHeader {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .taskHeader .category,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .taskHeader .category,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .category,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .taskHeader .category,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .taskHeader .category,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .taskHeader .category,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .category,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .taskHeader .category,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .taskHeader .category,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .taskHeader .category,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .category,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .taskHeader .category,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .taskHeader .category,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .taskHeader .category,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .category,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .taskHeader .category {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: black;
+  padding: 4px 16px 4px 16px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .moveToButton,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .taskHeader .moveToButton {
+  background-color: transparent;
+  border: none;
+  height: 25px;
+  width: 25px;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .moveToButton svg,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .taskHeader .moveToButton svg {
+  width: 20px;
+  height: 20px;
+  fill: #000000;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu {
+  position: absolute;
+  flex-direction: column;
+  gap: 10px;
+  top: 5px;
+  right: 30px;
+  background-color: #2a3647;
+  padding: 10px 0px;
+  border-radius: 10px 0px 10px 10px;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton {
+  display: flex;
+  justify-content: left;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 8px 15px;
+  width: 100%;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .taskHeader .mobileMenu .mobileMenuButton:hover {
+  cursor: pointer;
+  background-color: #2a3d59;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer .title,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer .title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 120%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .titleDescriptionContainer .description,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .titleDescriptionContainer .description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #a8a8a8;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .statusSubtasks,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .statusSubtasks,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .statusSubtasks,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .statusSubtasks,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .statusSubtasks,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .statusSubtasks,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .statusSubtasks,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .statusSubtasks {
+  display: flex;
+  gap: 11px;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks .progressBar,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .statusSubtasks .progressBar {
+  width: 120px;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .statusSubtasks .progressText,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .statusSubtasks .progressText {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .assignedPriority,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .assignedPriority,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .assignedPriority,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .assignedPriority,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .assignedPriority,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .assignedPriority,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .assignedPriority,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .assignedPriority,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .assignedPriority,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .assignedPriority,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .assignedPriority,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .assignedPriority {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo {
+  display: flex;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo .initials,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo .initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  background-color: burlywood;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child),
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .assignedPriority .assignedTo .initials:not(:first-child) {
+  margin-left: -8px;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .urgentIcon,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .urgentIcon {
+  height: 17px;
+  width: 17px;
+  fill: #ff3d00;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .mediumIcon,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .mediumIcon {
+  height: 17px;
+  width: 17px;
+  fill: #ffa800;
+}
+.taskCards .todoCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .todoCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .todoCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .todoCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .inProgressCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .inProgressCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .inProgressCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .awaitFeedbackCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .awaitFeedbackCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .doneCardsContainer .todoCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .doneCardsContainer .inProgressCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .doneCardsContainer .awaitFeedbackCards .cardsContainer .card .assignedPriority .priority .lowIcon,
+.taskCards .doneCardsContainer .doneCards .cardsContainer .card .assignedPriority .priority .lowIcon {
+  height: 17px;
+  width: 17px;
+  fill: #7ae229;
+}
+.taskCards .todoCardsContainer .todoCards .draggableIndicator,
+.taskCards .todoCardsContainer .inProgressCards .draggableIndicator,
+.taskCards .todoCardsContainer .awaitFeedbackCards .draggableIndicator,
+.taskCards .todoCardsContainer .doneCards .draggableIndicator,
+.taskCards .inProgressCardsContainer .todoCards .draggableIndicator,
+.taskCards .inProgressCardsContainer .inProgressCards .draggableIndicator,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .draggableIndicator,
+.taskCards .inProgressCardsContainer .doneCards .draggableIndicator,
+.taskCards .awaitFeedbackCardsContainer .todoCards .draggableIndicator,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .draggableIndicator,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .draggableIndicator,
+.taskCards .awaitFeedbackCardsContainer .doneCards .draggableIndicator,
+.taskCards .doneCardsContainer .todoCards .draggableIndicator,
+.taskCards .doneCardsContainer .inProgressCards .draggableIndicator,
+.taskCards .doneCardsContainer .awaitFeedbackCards .draggableIndicator,
+.taskCards .doneCardsContainer .doneCards .draggableIndicator {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 24px;
+}
+@media (max-width: 1400px) {
+  .taskCards .todoCardsContainer .todoCards .draggableIndicator,
+  .taskCards .todoCardsContainer .inProgressCards .draggableIndicator,
+  .taskCards .todoCardsContainer .awaitFeedbackCards .draggableIndicator,
+  .taskCards .todoCardsContainer .doneCards .draggableIndicator,
+  .taskCards .inProgressCardsContainer .todoCards .draggableIndicator,
+  .taskCards .inProgressCardsContainer .inProgressCards .draggableIndicator,
+  .taskCards .inProgressCardsContainer .awaitFeedbackCards .draggableIndicator,
+  .taskCards .inProgressCardsContainer .doneCards .draggableIndicator,
+  .taskCards .awaitFeedbackCardsContainer .todoCards .draggableIndicator,
+  .taskCards .awaitFeedbackCardsContainer .inProgressCards .draggableIndicator,
+  .taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .draggableIndicator,
+  .taskCards .awaitFeedbackCardsContainer .doneCards .draggableIndicator,
+  .taskCards .doneCardsContainer .todoCards .draggableIndicator,
+  .taskCards .doneCardsContainer .inProgressCards .draggableIndicator,
+  .taskCards .doneCardsContainer .awaitFeedbackCards .draggableIndicator,
+  .taskCards .doneCardsContainer .doneCards .draggableIndicator {
+    width: 252px;
+    height: auto;
+  }
+}
+.taskCards .todoCardsContainer .todoCards .draggableIndicator.targetSlot,
+.taskCards .todoCardsContainer .inProgressCards .draggableIndicator.targetSlot,
+.taskCards .todoCardsContainer .awaitFeedbackCards .draggableIndicator.targetSlot,
+.taskCards .todoCardsContainer .doneCards .draggableIndicator.targetSlot,
+.taskCards .inProgressCardsContainer .todoCards .draggableIndicator.targetSlot,
+.taskCards .inProgressCardsContainer .inProgressCards .draggableIndicator.targetSlot,
+.taskCards .inProgressCardsContainer .awaitFeedbackCards .draggableIndicator.targetSlot,
+.taskCards .inProgressCardsContainer .doneCards .draggableIndicator.targetSlot,
+.taskCards .awaitFeedbackCardsContainer .todoCards .draggableIndicator.targetSlot,
+.taskCards .awaitFeedbackCardsContainer .inProgressCards .draggableIndicator.targetSlot,
+.taskCards .awaitFeedbackCardsContainer .awaitFeedbackCards .draggableIndicator.targetSlot,
+.taskCards .awaitFeedbackCardsContainer .doneCards .draggableIndicator.targetSlot,
+.taskCards .doneCardsContainer .todoCards .draggableIndicator.targetSlot,
+.taskCards .doneCardsContainer .inProgressCards .draggableIndicator.targetSlot,
+.taskCards .doneCardsContainer .awaitFeedbackCards .draggableIndicator.targetSlot,
+.taskCards .doneCardsContainer .doneCards .draggableIndicator.targetSlot {
+  border: 2px dotted #a8a8a8;
+}
+
+.taskDetailView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.taskDetailView .taskDetailViewCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 80%;
+  max-width: 525px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 32px 20px 32px 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px 20px 20px 20px;
+  border-radius: 30px;
+  overflow: auto;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .header {
+  display: flex;
+  justify-content: space-between;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .header .category {
+  background-color: #000000;
+  font-size: 23px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 4px 24px 4px 24px;
+  border-radius: 8px;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .header .category {
+    font-size: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .header .closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .header .closeButton svg {
+  height: 15px;
+  width: 15px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .header .closeButton:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .title {
+  font-size: 61px;
+  font-weight: bold;
+  line-height: 120%;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .title {
+    font-size: 30px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .description {
+    font-size: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .dueDate {
+  display: flex;
+  gap: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .dueDate {
+    font-size: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .dueDate span {
+  width: 100px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .priority {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .priority {
+    font-size: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .priority span {
+  width: 100px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .priority p::first-letter {
+  text-transform: uppercase;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .priority .urgentIcon {
+  height: 17px;
+  width: 17px;
+  fill: #ff3d00;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .priority .mediumIcon {
+  height: 17px;
+  width: 17px;
+  fill: #ffa800;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .priority .lowIcon {
+  height: 17px;
+  width: 17px;
+  fill: #7ae229;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .assignedTo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .assignedTo {
+    font-size: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .assignedTo .userNames {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .assignedTo .userNames .userName {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  list-style: none;
+  padding: 7px 16px 7px 16px;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .assignedTo .userNames .userName {
+    font-size: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .assignedTo .userNames .userName .userInitials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 42px;
+  min-width: 42px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: black;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .subtasks {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .subtasks {
+    font-size: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .subtasks .subtask {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 6.5px 16px 6.5px 16px;
+  border-radius: 10px;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .subtasks .subtask {
+    font-size: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .subtasks .subtask:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .subtasks .subtask input[type=checkbox] {
+  height: 24px;
+  width: 24px;
+}
+@media (max-width: 450px) {
+  .taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .subtasks .subtask input[type=checkbox] {
+    height: 16px;
+    width: 16px;
+    margin-right: 16px;
+  }
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .deleteButton,
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .editButton {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 120%;
+  background-color: unset;
+  border: unset;
+  width: 70px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .deleteButton:hover,
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .editButton:hover {
+  cursor: pointer;
+  color: #29abe2;
+  fill: #29abe2;
+  font-weight: bold;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .deleteButton svg,
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .editButton svg {
+  height: 24px;
+  width: 24px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .deleteButton {
+  width: 85px;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .editButton {
+  justify-content: end;
+}
+.taskDetailView .taskDetailViewCardContainer .taskDetailViewCard .buttons .editButton:hover {
+  border-left: 1px solid #d1d1d1;
+}
+
+.taskDetailViewCardEdit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  max-height: 95%;
+  max-width: 525px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px 20px 20px 20px;
+  border-radius: 30px;
+  overflow-y: auto;
+}
+.taskDetailViewCardEdit .header {
+  display: flex;
+  justify-content: end;
+}
+.taskDetailViewCardEdit .header .closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+.taskDetailViewCardEdit .header .closeButton svg {
+  height: 15px;
+  width: 15px;
+}
+.taskDetailViewCardEdit .header .closeButton:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+.taskDetailViewCardEdit .titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.taskDetailViewCardEdit .titleContainer .title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.taskDetailViewCardEdit .titleContainer .taskTitleInput {
+  width: 100%;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 20px;
+  outline: none;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .titleContainer .taskTitleInput {
+    font-size: 16px;
+  }
+}
+.taskDetailViewCardEdit .titleContainer .taskTitleInput:focus {
+  border: 1px solid #29abe2;
+}
+.taskDetailViewCardEdit .descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.taskDetailViewCardEdit .descriptionContainer .description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.taskDetailViewCardEdit .descriptionContainer .taskDescriptionInput {
+  height: 120px;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 20px;
+  outline: none;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .descriptionContainer .taskDescriptionInput {
+    font-size: 16px;
+  }
+}
+.taskDetailViewCardEdit .descriptionContainer .taskDescriptionInput:focus {
+  border: 1px solid #29abe2;
+}
+.taskDetailViewCardEdit .dueDateContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.taskDetailViewCardEdit .dueDateContainer .dueDate {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.taskDetailViewCardEdit .dueDateContainer .taskDueDateInput {
+  width: 100%;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 20px;
+  outline: none;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .dueDateContainer .taskDueDateInput {
+    font-size: 16px;
+  }
+}
+.taskDetailViewCardEdit .dueDateContainer .taskDueDateInput:focus {
+  border: 1px solid #29abe2;
+}
+.taskDetailViewCardEdit .priorityContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .priorityContainer {
+    align-items: center;
+  }
+}
+.taskDetailViewCardEdit .priorityContainer .priority {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .priorityContainer .prioContainer {
+    flex-direction: column;
+  }
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer .priorities {
+  width: 136px;
+  padding: 16px 10px;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 600px) {
+  .taskDetailViewCardEdit .priorityContainer .prioContainer .priorities {
+    font-size: 16px;
+  }
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer .priorities:hover {
+  cursor: pointer;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer .priorities.urgentPrio {
+  background-color: #ff3d00;
+  cursor: auto;
+  box-shadow: none;
+  color: white;
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer .priorities.urgentPrio img {
+  filter: brightness(0) invert(1);
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer .priorities.mediumPrio {
+  background-color: #ffa800;
+  cursor: auto;
+  box-shadow: none;
+  color: white;
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer .priorities.mediumPrio img {
+  filter: brightness(0) invert(1);
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer .priorities.lowPrio {
+  background-color: #7ae229;
+  cursor: auto;
+  box-shadow: none;
+  color: white;
+}
+.taskDetailViewCardEdit .priorityContainer .prioContainer .priorities.lowPrio img {
+  filter: brightness(0) invert(1);
+}
+.taskDetailViewCardEdit .assignedToContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.taskDetailViewCardEdit .assignedToContainer .assignedTo {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.taskDetailViewCardEdit .assignedToContainer .assignedToDropdown {
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  padding-left: 0px;
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .assignedToContainer .assignedToDropdown {
+    font-size: 16px;
+  }
+}
+.taskDetailViewCardEdit .assignedToContainer .assignedToDropdown .searchUserToAssign {
+  width: 100%;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  outline: none;
+}
+.taskDetailViewCardEdit .assignedToContainer .assignedToDropdown .searchUserToAssign:focus .assignedToDropdownContainer {
+  border: 1px solid #29abe2;
+}
+.taskDetailViewCardEdit .assignedToContainer .assignedToDropdown .assignedToDropdownArrow {
+  rotate: 180deg;
+  border-radius: 12px;
+  transition: all 0.1s ease-in;
+}
+.taskDetailViewCardEdit .assignedToContainer .assignedToDropdown .assignedToDropdownArrow:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.5725490196);
+}
+.taskDetailViewCardEdit .assignedToContainer .assignedToDropdown .rotatedArrow {
+  rotate: 0deg;
+}
+.taskDetailViewCardEdit .currentAssignation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.taskDetailViewCardEdit .currentAssignation .initialsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  color: white;
+}
+.taskDetailViewCardEdit .contactsToAssign {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;
+  overflow-y: scroll;
+}
+.taskDetailViewCardEdit .contactsToAssign .userListItem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 10px;
+}
+.taskDetailViewCardEdit .contactsToAssign .userListItem.checked {
+  color: white;
+  background-color: #2a3647;
+  border-radius: 10px;
+}
+.taskDetailViewCardEdit .contactsToAssign .userListItem .userCheckbox:hover {
+  cursor: pointer;
+}
+.taskDetailViewCardEdit .contactsToAssign .userListItem:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #091931;
+  border-radius: 10px;
+}
+.taskDetailViewCardEdit .contactsToAssign .initialsNameWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .contactsToAssign .initialsNameWrapper p {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.taskDetailViewCardEdit .contactsToAssign .initialsNameWrapper .initialsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  color: white;
+}
+.taskDetailViewCardEdit .addSubtaskContainer {
+  position: relative;
+}
+.taskDetailViewCardEdit .addSubtaskContainer svg {
+  min-height: 8px !important;
+  min-width: 8px !important;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskInputContainer {
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  padding-left: 0px;
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .taskDetailViewCardEdit .addSubtaskContainer .subtaskInputContainer {
+    height: 41px;
+  }
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskInputContainer .subtaskInput {
+  width: 80%;
+  height: 48px;
+  outline: none;
+  border: none;
+  padding: 0;
+  padding-left: 16px;
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .taskDetailViewCardEdit .addSubtaskContainer .subtaskInputContainer .subtaskInput {
+    height: 37px;
+  }
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskInputContainer .newSubtaskPlusBtn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskInputContainer .newSubtaskPlusBtn:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.5725490196);
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 120px;
+  width: 100%;
+  padding: 7px 0px;
+  overflow-y: auto;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox {
+  width: 100%;
+  padding: 0px 16px;
+  min-height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox p {
+    font-size: 12px;
+  }
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.5725490196);
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox:hover .subtaskActionBox {
+  display: flex;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .dotBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .dotBox svg {
+  padding: 0;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: none;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox div svg {
+  height: 19px;
+  width: 19px;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox div svg {
+    height: 13px;
+    width: 13px;
+  }
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox div svg:hover {
+  cursor: pointer;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .currentSubtaskBox .subtaskActionBox .subtaskSeparator {
+  width: 2px;
+  height: 24px;
+  background-color: #a8a8a8;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox {
+  width: 100%;
+  height: 30px;
+  padding: 4px 16px;
+  background-color: white;
+  border-bottom: 1px solid #29abe2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .editSubtaskInput {
+  width: 80%;
+  height: 98%;
+  outline: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox div svg {
+  height: 19px;
+  width: 19px;
+}
+@media (max-width: 450px) {
+  .taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox div svg {
+    height: 13px;
+    width: 13px;
+  }
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox div svg:hover {
+  cursor: pointer;
+}
+.taskDetailViewCardEdit .addSubtaskContainer .subtaskContainer .subtaskElementWrapper .editSubtaskBox .subtaskActionBox .subtaskSeparator {
+  width: 2px;
+  height: 24px;
+  background-color: #a8a8a8;
+}
+.taskDetailViewCardEdit .addTaskBottomContainer {
+  width: 976px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (max-width: 1400px) {
+  .taskDetailViewCardEdit .addTaskBottomContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer {
+  display: flex;
+}
+.taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .clearBtn {
+  gap: 4px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 400;
+  color: #2a3647;
+  margin-right: 24px;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 600px) {
+  .taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .clearBtn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .clearBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+.taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .clearBtn:hover {
+  border: 1px solid #29abe2;
+  color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .clearBtn:hover img {
+  filter: invert(46%) sepia(52%) saturate(2400%) hue-rotate(163deg) brightness(95%) contrast(101%);
+}
+.taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .createBtn {
+  gap: 4px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2a3647;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+.taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .createBtn svg {
+  fill: white;
+}
+.taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .createBtn:hover {
+  background-color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 600px) {
+  .taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .createBtn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 450px) and (max-height: 950px) {
+  .taskDetailViewCardEdit .addTaskBottomContainer .taskBtnContainer .createBtn {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+
+.privacyText {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-height: calc(100vh - 96px);
+  padding-left: 80px;
+  padding-right: 80px;
+  overflow: auto;
+}
+.privacyText h1 {
+  font-size: 30px;
+}
+.privacyText h2,
+.privacyText h3,
+.privacyText h4 {
+  font-size: 20px;
+}
+.privacyText .backArrow {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+.privacyText .backArrow img:hover {
+  background-color: #eeeeee;
+  transform: scale(1.1);
+  border-radius: 60%;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .privacyText {
+    height: calc(100dvh - 160px);
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.legalNoticeText {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-height: calc(100vh - 96px);
+  padding-left: 80px;
+  padding-right: 80px;
+  overflow: auto;
+}
+.legalNoticeText .backArrow {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+.legalNoticeText .backArrow img:hover {
+  background-color: #eeeeee;
+  transform: scale(1.1);
+  border-radius: 60%;
+  cursor: pointer;
+}
+.legalNoticeText h1 {
+  font-size: 30px;
+}
+.legalNoticeText h2,
+.legalNoticeText h3,
+.legalNoticeText h4 {
+  font-size: 20px;
+}
+
+@media (max-width: 1400px) {
+  .legalNoticeText {
+    height: calc(100dvh - 160px);
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.helpDescription {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-height: calc(100vh - 96px);
+  padding-left: 80px;
+  padding-right: 80px;
+  overflow: auto;
+}
+.helpDescription h1 {
+  font-size: 30px;
+}
+.helpDescription h2,
+.helpDescription h3,
+.helpDescription h4 {
+  font-size: 20px;
+}
+.helpDescription .join {
+  color: #4fb9e7;
+}
+
+.backArrow {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+.backArrow img:hover {
+  background-color: #eeeeee;
+  transform: scale(1.1);
+  border-radius: 60%;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .helpDescription {
+    height: calc(100dvh - 160px);
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.logInMainSection {
+  width: 100%;
+  min-height: 860px;
+  height: 100dvh;
+  max-height: 100dvh;
+  position: relative;
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.logoAnimationDialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4000;
+  min-height: 860px;
+  height: 100dvh;
+  max-height: 100dvh;
+  width: 100%;
+  background-color: white;
+  transition: all 0.6s ease-in;
+  opacity: 1;
+}
+@media (max-width: 1400px) {
+  .logoAnimationDialog {
+    background-color: #2a3647;
+  }
+}
+
+.joinLogoBox {
+  position: absolute;
+  z-index: 5000;
+  width: 100px;
+  height: 122px;
+  transform: translate(0, 0) scale(1);
+  top: 80px;
+  left: 77px;
+  transition: all 0.6s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .joinLogoBox {
+    width: 64px;
+    height: 78px;
+    top: 37px;
+    left: 38px;
+  }
+}
+@keyframes colorChangeJoinLogo {
+  0% {
+    fill: white;
+  }
+  58% {
+    fill: white;
+  }
+  80% {
+    fill: #2a3647;
+  }
+  100% {
+    fill: #2a3647;
+  }
+}
+.joinLogoBox svg {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1400px) {
+  .joinLogoBox svg path:nth-of-type(1) {
+    animation: colorChangeJoinLogo 1.4s linear forwards;
+  }
+  .joinLogoBox svg path:nth-of-type(2) {
+    animation: colorChangeJoinLogo 1.4s linear forwards;
+  }
+  .joinLogoBox svg path:nth-of-type(4) {
+    animation: colorChangeJoinLogo 1.4s linear forwards;
+  }
+  .joinLogoBox svg path:nth-of-type(5) {
+    animation: colorChangeJoinLogo 1.4s linear forwards;
+  }
+  .joinLogoBox svg path:nth-of-type(6) {
+    animation: colorChangeJoinLogo 1.4s linear forwards;
+  }
+}
+
+.joinLogoAnimation {
+  top: 50dvh;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2.7);
+}
+
+.linkToSignUpBox {
+  position: absolute;
+  bottom: calc(100dvh - 147px);
+  right: 122px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+@media (max-width: 1400px) {
+  .linkToSignUpBox {
+    bottom: 99px;
+    right: 50%;
+    transform: translate(50%);
+  }
+}
+.linkToSignUpBox p {
+  font-size: 20px;
+}
+@media (max-width: 1400px) {
+  .linkToSignUpBox p {
+    text-wrap: nowrap;
+  }
+}
+.linkToSignUpBox button {
+  height: 48px;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2a3647;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .linkToSignUpBox button {
+    font-size: 16px;
+    width: 104px;
+    text-wrap: nowrap;
+  }
+}
+.linkToSignUpBox button:hover {
+  background-color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.signUpDialogField {
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.signUpDialogField .signUpUserFeedback {
+  background-color: #2a3647;
+  position: absolute;
+  padding: 25px;
+  border-radius: 20px;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+  left: 50%;
+  bottom: -80px;
+  transform: translate(-50%, 0px);
+  transition: all 0.4s ease-out;
+}
+.signUpDialogField .signUpUserFeedback.translateSignUpFeedback {
+  transform: translate(-50%, calc(-50dvh - 80px));
+}
+.signUpDialogField .signUpUserFeedback p {
+  color: white;
+  line-height: 24px;
+  font-size: 20px;
+}
+
+.logInRenderContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer {
+    max-width: 396px;
+    width: calc(100% - 16px);
+    margin-right: 8px;
+    margin-left: 8px;
+    transform: translate(calc(-50% - 8px), -50%);
+  }
+}
+.logInRenderContainer .logInTemplate {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 115px;
+  border-radius: 30px;
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate {
+    padding: 32px 16px;
+  }
+}
+.logInRenderContainer .logInTemplate .backArrow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 48px;
+  top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vh;
+  transition: all 0.12s ease-in-out;
+  cursor: pointer;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .backArrow {
+    left: 29px;
+    top: 46px;
+  }
+}
+.logInRenderContainer .logInTemplate .backArrow:hover {
+  background-color: rgba(12, 46, 98, 0.1215686275);
+}
+.logInRenderContainer .logInTemplate .backArrow svg {
+  width: 32px;
+  height: 32px;
+  fill: #29abe2;
+}
+.logInRenderContainer .logInTemplate .logInTextBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.logInRenderContainer .logInTemplate .logInTextBox p {
+  font-size: 61px;
+  font-weight: 700;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .logInTextBox p {
+    font-size: 47px;
+  }
+}
+.logInRenderContainer .logInTemplate .logInTextBox .blueUnderlineDiv {
+  width: 150px;
+  height: 3px;
+  background-color: #29abe2;
+  border-radius: 50vh;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .logInTextBox .blueUnderlineDiv {
+    width: 88px;
+  }
+}
+.logInRenderContainer .logInTemplate .logInInputArea {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .logInInputArea {
+    width: 100%;
+    max-width: 364px;
+  }
+}
+.logInRenderContainer .logInTemplate .logInInputArea input {
+  width: 422px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 13px 21px;
+  font-size: 20px;
+  background-position: 95%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .logInInputArea input {
+    width: 100%;
+  }
+}
+.logInRenderContainer .logInTemplate .logInInputArea input::-moz-placeholder {
+  color: #d1d1d1;
+  height: 24px;
+}
+.logInRenderContainer .logInTemplate .logInInputArea input::placeholder {
+  color: #d1d1d1;
+  height: 24px;
+}
+.logInRenderContainer .logInTemplate .logInInputArea .inputEmail {
+  background-image: url(/assets/icons/inputEmail.svg);
+  margin-bottom: 32px;
+}
+.logInRenderContainer .logInTemplate .logInInputArea .inputEmail:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.logInRenderContainer .logInTemplate .logInInputArea .inputEmail:focus {
+  border: 1px solid #29abe2;
+  outline: none;
+}
+.logInRenderContainer .logInTemplate .logInInputArea .inputPassword {
+  background-image: url(/assets/icons/password.svg);
+}
+.logInRenderContainer .logInTemplate .logInInputArea .inputPassword:focus {
+  border: 1px solid #29abe2;
+  outline: none;
+}
+.logInRenderContainer .logInTemplate .logInInputArea .checkToRememberBox {
+  display: flex;
+  gap: 8px;
+  padding-left: 42px;
+  padding-top: 48px;
+  align-items: center;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .logInInputArea .checkToRememberBox {
+    padding-left: 16px;
+  }
+}
+.logInRenderContainer .logInTemplate .logInInputArea .checkToRememberBox input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.logInRenderContainer .logInTemplate .logInInputArea .checkToRememberBox input[type=checkbox]:checked {
+  background-color: #29abe2;
+  border-color: #29abe2;
+}
+.logInRenderContainer .logInTemplate .logInInputArea .checkToRememberBox input[type=checkbox]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logInRenderContainer .logInTemplate .logInInputArea .checkToRememberBox p {
+  font-size: 16px;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .signUpInputArea {
+    width: 100%;
+  }
+}
+.logInRenderContainer .logInTemplate .signUpInputArea input {
+  width: 422px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 13px 21px;
+  font-size: 20px;
+  background-position: 95%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .signUpInputArea input {
+    width: 100%;
+    max-width: 364px;
+  }
+}
+.logInRenderContainer .logInTemplate .signUpInputArea input::-moz-placeholder {
+  color: #d1d1d1;
+  height: 24px;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea input::placeholder {
+  color: #d1d1d1;
+  height: 24px;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .inputName {
+  background-image: url(/assets/icons/inputName.svg);
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .inputName:focus {
+  border: 1px solid #29abe2;
+  outline: none;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .inputEmail {
+  background-image: url(/assets/icons/inputEmail.svg);
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .inputEmail:focus {
+  border: 1px solid #29abe2;
+  outline: none;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .inputPassword {
+  background-image: url(/assets/icons/password.svg);
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .inputPassword:focus {
+  border: 1px solid #29abe2;
+  outline: none;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .checkToRememberContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .signUpInputArea .checkToRememberContainer {
+    padding-top: 32px;
+  }
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .checkToRememberContainer .checkToRememberBox {
+  display: flex;
+  font-size: 16px;
+  gap: 8px;
+  align-items: center;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .checkToRememberContainer .checkToRememberBox .checkboxRememberMe {
+  width: 16px;
+  height: 16px;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .checkToRememberContainer .checkToRememberBox p {
+  font-size: 16px;
+  color: #d1d1d1;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .checkToRememberContainer .checkToRememberBox a {
+  color: #29abe2;
+}
+.logInRenderContainer .logInTemplate .signUpInputArea .checkToRememberContainer .checkToRememberBox a:hover {
+  text-decoration: underline;
+}
+.logInRenderContainer .logInTemplate .logInBtnBox {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .logInBtnBox {
+    flex-direction: column;
+    gap: 21px;
+  }
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .logInBtn {
+  height: 48px;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2a3647;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .logInBtnBox .logInBtn {
+    height: 51px;
+    width: 180px;
+  }
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .logInBtn:hover {
+  background-color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .logInBtn.buttonDisabled {
+  cursor: default;
+  background-color: grey;
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .logInBtn.buttonDisabled:hover {
+  box-shadow: none;
+  background-color: grey;
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .signUpBtn {
+  height: 55px;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2a3647;
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 1400px) {
+  .logInRenderContainer .logInTemplate .logInBtnBox .signUpBtn {
+    height: 51px;
+    width: 180px;
+    font-size: 16px;
+  }
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .signUpBtn:hover {
+  background-color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .signUpBtn.buttonDisabled {
+  cursor: default;
+  background-color: grey;
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .signUpBtn.buttonDisabled:hover {
+  box-shadow: none;
+  background-color: grey;
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .guestLogInBtn {
+  height: 48px;
+  padding: 15px 24px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  background-color: white;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 700;
+  color: #2a3647;
+  transition: all 0.1s ease-in-out;
+}
+.logInRenderContainer .logInTemplate .logInBtnBox .guestLogInBtn:hover {
+  border: 1px solid #29abe2;
+  color: #29abe2;
+  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.privacyContainer {
+  display: flex;
+  width: 230px;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.privacyContainer a {
+  color: #d1d1d1;
+  font-size: 16px;
+}
+.privacyContainer a:hover {
+  color: #29abe2;
+  font-weight: 700;
+}
+
+#privacyPolicyCheckBox[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+#privacyPolicyCheckBox[type=checkbox]:checked {
+  background-color: #29abe2;
+  border-color: #29abe2;
+}
+#privacyPolicyCheckBox[type=checkbox]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.d_none {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .summaryWelcomeMessageMobile {
+    height: calc(100dvh - 80px - 80px);
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    position: absolute;
+  }
+}
+.summaryWelcomeMessageMobile h2 {
+  font-size: 47px;
+  font-weight: 500;
+  color: #2a3647;
+}
+.summaryWelcomeMessageMobile h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #29abe2;
+}
+
+.summaryWrapper {
+  background-color: rgb(246, 247, 248);
+  height: calc(100dvh - 96px);
+  padding: 80px 96px 96px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  overflow-y: auto;
+}
+@media (max-width: 1400px) {
+  .summaryWrapper {
+    padding: 48px 16px;
+    align-items: center;
+    height: calc(100dvh - 80px - 80px);
+  }
+}
+@media (max-width: 600px) {
+  .summaryWrapper {
+    padding: 48px 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    gap: 36px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper {
+    padding: 24px 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 625px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper {
+    gap: 24px;
+  }
+}
+.summaryWrapper .summaryHeadline {
+  width: 625px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 1400px) {
+  .summaryWrapper .summaryHeadline {
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper .summaryHeadline {
+    align-items: start;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryHeadline {
+    gap: 8px;
+  }
+}
+.summaryWrapper .summaryHeadline h1 {
+  font-size: 61px;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryHeadline h1 {
+    font-size: 54px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper .summaryHeadline h1 {
+    font-size: 47px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryHeadline h1 {
+    font-size: 32px;
+  }
+}
+.summaryWrapper .summaryHeadline span {
+  font-size: 27px;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryHeadline span {
+    font-size: 24px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper .summaryHeadline span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryHeadline span {
+    font-size: 14px;
+  }
+}
+.summaryWrapper .summaryHeadline .headlineSeparator {
+  height: 100%;
+  width: 3px;
+  background-color: #29abe2;
+}
+@media (max-width: 1400px) {
+  .summaryWrapper .summaryHeadline .headlineSeparator {
+    display: none;
+  }
+}
+.summaryWrapper .summaryHeadline .headlineSeparatorMobile {
+  width: 90px;
+  height: 3px;
+  background-color: #29abe2;
+  display: none;
+}
+@media (max-width: 1400px) {
+  .summaryWrapper .summaryHeadline .headlineSeparatorMobile {
+    display: block;
+  }
+}
+.summaryWrapper .summaryMiddleContent {
+  display: flex;
+  align-items: center;
+  gap: 84px;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus {
+  width: 560px;
+  height: 562px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus {
+    width: 100%;
+    height: 484px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus {
+    width: 100%;
+    height: 384px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus {
+    height: 272px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine {
+  width: 560px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine {
+    width: 100%;
+    gap: 16px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper {
+  width: 264px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  transition: all 0.1s ease-in;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper {
+    width: 208px;
+    height: 124px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper {
+    width: 186px;
+    height: 110px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper {
+    width: 144px;
+    height: 85px;
+    border-radius: 15px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #2a3647;
+  color: white;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper:hover .iconContainer {
+  background-color: white;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper:hover .iconContainer img {
+  filter: invert(43%) sepia(17%) saturate(524%) hue-rotate(180deg) brightness(35%) contrast(93%);
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .iconContainer {
+  height: 69px;
+  width: 69px;
+  border-radius: 50vh;
+  background-color: #2a3647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .iconContainer {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .iconContainer {
+    width: 35px;
+    height: 35px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .iconContainer img {
+  transition: all 0.1s ease-in;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .iconContainer img {
+    width: 20px;
+    height: auto;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .amountContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .amountContainer p {
+  font-size: 64px;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .amountContainer p {
+    font-size: 47px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .amountContainer p {
+    font-size: 32px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .amountContainer span {
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .amountContainer span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusFirstLine .toDoWrapper .amountContainer span {
+    font-size: 10px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine {
+  width: 560px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  transition: all 0.1s ease-in;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine {
+    width: 100%;
+    height: 124px;
+    border-radius: 20px;
+    gap: 24px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine {
+    width: 100%;
+    height: 110px;
+    border-radius: 20px;
+    gap: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine {
+    width: 100%;
+    height: 85px;
+    border-radius: 15px;
+    gap: 18px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #2a3647;
+  color: white;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine:hover .urgentDeadlineContainer p {
+  color: white;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine:hover .urgentDeadlineContainer span {
+  color: white;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .iconContainer {
+  height: 60px;
+  width: 60px;
+  border-radius: 50vh;
+  background-color: #ff3d00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .iconContainer {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .iconContainer {
+    width: 35px;
+    height: 35px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .iconContainer img {
+  transition: all 0.1s ease-in;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .iconContainer img {
+    width: 20px;
+    height: auto;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .amountContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .amountContainer p {
+  font-size: 64px;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .amountContainer p {
+    font-size: 47px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .amountContainer p {
+    font-size: 36px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .amountContainer span {
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .amountContainer span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentAmountWrapper .amountContainer span {
+    font-size: 12px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentSeparator {
+  height: 102px;
+  width: 2px;
+  background-color: #d1d1d1;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentSeparator {
+    height: 84px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentSeparator {
+    height: 68px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentDeadlineContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentDeadlineContainer p {
+  font-size: 21px;
+  font-weight: 700;
+  color: #2a3647;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentDeadlineContainer p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentDeadlineContainer p {
+    font-size: 12px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentDeadlineContainer span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2a3647;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentDeadlineContainer span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusSecondLine .urgentDeadlineContainer span {
+    font-size: 10px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine {
+  width: 560px;
+  height: 168px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine {
+    width: 100%;
+    height: 110px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine {
+    height: 85px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer {
+  height: 168px;
+  width: 168px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.1s ease-in;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer {
+    width: 124px;
+    height: 124px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer {
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer {
+    width: 90px;
+    height: 85px;
+    border-radius: 15px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #2a3647;
+  color: white;
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer p {
+  font-size: 64px;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer p {
+    font-size: 47px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer p {
+    font-size: 32px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer span {
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .summaryWrapper .summaryMiddleContent .summaryTasksStatus .statusThirdLine .amountContainer span {
+    font-size: 10px;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryWelcomeMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+@media (max-width: 1400px) {
+  .summaryWrapper .summaryMiddleContent .summaryWelcomeMessage {
+    display: none;
+  }
+}
+.summaryWrapper .summaryMiddleContent .summaryWelcomeMessage h2 {
+  font-size: 47px;
+  font-weight: 500;
+  color: #2a3647;
+}
+.summaryWrapper .summaryMiddleContent .summaryWelcomeMessage h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #29abe2;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f6f7f8;
+}
+body main {
+  display: flex;
+}
+@media (max-width: 1400px) {
+  body main {
+    flex-direction: column-reverse;
+  }
+}
+body main .mainSection {
+  display: flex;
+  width: 100%;
+  max-height: 100dvh;
+  height: 100%;
+}
+@media (max-width: 1400px) {
+  body main .mainSection {
+    height: calc(100dvh - 80px);
+  }
+}
+body main .mainSection .content {
+  width: 100%;
+  height: 100dvh;
+}
+body main .mainSection .content .contactContent {
+  display: flex;
+  height: calc(100dvh - 96px);
+}
+@media (max-width: 1400px) {
+  body main .mainSection .content .contactContent {
+    height: calc(100dvh - 160px);
+  }
+}/*# sourceMappingURL=style.css.map */

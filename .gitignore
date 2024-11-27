@@ -1,7 +1,5 @@
 # Ordner ignorieren
 .vscode/
-style.css
-style.css.map
 node_modules/
 docs/
 
