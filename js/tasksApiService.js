@@ -7,7 +7,7 @@
  *
  * @constant {string}
  */
-const baseUrl = "https://join-storage-460c8-default-rtdb.europe-west1.firebasedatabase.app/";
+const baseUrl = "https://join-bf16e-default-rtdb.europe-west1.firebasedatabase.app/";
 
 /**
  * Imports the function to retrieve a new task template.

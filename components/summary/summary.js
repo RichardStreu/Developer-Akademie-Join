@@ -7,7 +7,7 @@
  *
  * @constant {string}
  */
-const baseUrl = "https://join-storage-460c8-default-rtdb.europe-west1.firebasedatabase.app/";
+const baseUrl = "https://join-bf16e-default-rtdb.europe-west1.firebasedatabase.app/";
 
 /**
  * Initializes the summary by fetching summary data and rendering it.
@@ -18,24 +18,12 @@ const baseUrl = "https://join-storage-460c8-default-rtdb.europe-west1.firebaseda
  * @returns {Promise<void>} A promise that resolves when the summary has been initialized.
  */
 export async function initSummary() {
-  let [currentTasksAmount, urgentTasksAmount, toDoAmount, inProgressAmount, awaitFeedbackAmount, doneAmount, closestDueDate, isDueDateInThePast, welcomeMessage, loggedInUser] =
-    await getSummaryData();
+  let [currentTasksAmount, urgentTasksAmount, toDoAmount, inProgressAmount, awaitFeedbackAmount, doneAmount, closestDueDate, isDueDateInThePast, welcomeMessage, loggedInUser] = await getSummaryData();
   const previousPage = sessionStorage.get;
   if (window.innerWidth <= 1400 && document.referrer.includes("index.html")) {
     showWelcomeMessageInMobile(welcomeMessage, loggedInUser);
   }
-  renderSummary(
-    currentTasksAmount,
-    urgentTasksAmount,
-    toDoAmount,
-    inProgressAmount,
-    awaitFeedbackAmount,
-    doneAmount,
-    closestDueDate,
-    isDueDateInThePast,
-    welcomeMessage,
-    loggedInUser
-  );
+  renderSummary(currentTasksAmount, urgentTasksAmount, toDoAmount, inProgressAmount, awaitFeedbackAmount, doneAmount, closestDueDate, isDueDateInThePast, welcomeMessage, loggedInUser);
 }
 
 /**
@@ -79,18 +67,7 @@ async function getSummaryData() {
  * @param {string} loggedInUser - The name of the logged-in user.
  * @returns {Promise<void>} A promise that resolves when the summary is rendered.
  */
-async function renderSummary(
-  currentTasksAmount,
-  urgentTasksAmount,
-  toDoAmount,
-  inProgressAmount,
-  awaitFeedbackAmount,
-  doneAmount,
-  closestDueDate,
-  isDueDateInThePast,
-  welcomeMessage,
-  loggedInUser
-) {
+async function renderSummary(currentTasksAmount, urgentTasksAmount, toDoAmount, inProgressAmount, awaitFeedbackAmount, doneAmount, closestDueDate, isDueDateInThePast, welcomeMessage, loggedInUser) {
   document.getElementById("summaryContent").innerHTML = getSummaryTemplate(
     currentTasksAmount,
     urgentTasksAmount,
@@ -318,18 +295,7 @@ async function loadTasks() {
  * @param {string} loggedInUser - The name of the logged-in user.
  * @returns {string} The HTML template for the summary section.
  */
-function getSummaryTemplate(
-  currentTasksAmount,
-  urgentTasksAmount,
-  toDoAmount,
-  inProgressAmount,
-  awaitFeedbackAmount,
-  doneAmount,
-  closestDueDate,
-  isDueDateInThePast,
-  welcomeMessage,
-  loggedInUser
-) {
+function getSummaryTemplate(currentTasksAmount, urgentTasksAmount, toDoAmount, inProgressAmount, awaitFeedbackAmount, doneAmount, closestDueDate, isDueDateInThePast, welcomeMessage, loggedInUser) {
   return /*html*/ `              
           <div id="summaryWrapper" class="summaryWrapper">                 
               <div id="summaryHeadline" class="summaryHeadline">
